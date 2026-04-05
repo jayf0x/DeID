@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  scroll-behavior: smooth;
+  padding: none;
+  overflow: hidden;
+  background: white;
+}
+
+:root {
+  --background: #f9f9f9;
+  --foreground: #101011;
+  --primary: #2563eb;
+}
+
+.dark {
+  --background: #090909;
+  --foreground: #f1f1f1;
+  --primary: #3b82f6;
+}
