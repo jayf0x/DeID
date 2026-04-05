@@ -3,6 +3,15 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { Previews } from "./components/Preview";
 
+/** 
+ * TODO
+
+Create/updated-div-to-be main panel that has space on the sides:
+- main panel needs to be centered in the screen and mobile responsive
+- main panel has backdrop-filter with blur 3px
+
+
+ */
 
 export const Home = () => {
   return (

@@ -1,5 +1,7 @@
+// TODO: 
+
 export const Background = () => (
-    <div className="fixed w-full h-full top-0 left-0 overflow-hidden pointer-events-none">
+    <div className="fixed w-full h-full top-0 left-0 overflow-hidden pointer-events-none z-[-1]">
       <div className="absolute inset-0 h-full w-full opacity-20">
         <svg
           className="w-full h-full animate-slowPan"

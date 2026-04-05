@@ -6,7 +6,11 @@ html, body {
   scroll-behavior: smooth;
   padding: none;
   overflow: hidden;
-  background: white;
+  background: transparent;
+}
+
+#root {
+  isolation: isolate
 }
 
 :root {
