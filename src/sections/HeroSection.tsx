@@ -123,13 +123,10 @@ export const HeroSection = () => (
       ))}
     </motion.div>
 
-    {/* scroll indicator */}
-    <motion.div
-      className="absolute bottom-6 text-gray-400"
-      animate={{ y: [0, 7, 0] }}
-      transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
-    >
+
+    <div className="animate-arrow absolute bottom-6 text-gray-400">
       <ChevronDown size={22} />
-    </motion.div>
+    </div>
+
   </section>
 )

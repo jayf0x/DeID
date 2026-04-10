@@ -64,9 +64,9 @@ export const DocsSection = () => (
             <div className="rounded-xl overflow-hidden border border-gray-200/80 dark:border-white/[0.08] shadow-2xl shadow-black/8 dark:shadow-black/40">
               <Magnifier
                 src={img}
-                zoomFactor={2.5}
-                mgWidth={200}
-                mgHeight={200}
+                zoomFactor={1.5}
+                mgWidth={300}
+                mgHeight={300}
                 className="w-full h-auto block"
               />
             </div>

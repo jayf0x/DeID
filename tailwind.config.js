@@ -43,6 +43,7 @@ export default {
         typing: "typing 0.8s steps(40, end)",
         slowPan: "pan 8s alternate infinite",
         blob: "blob 7s infinite",
+        arrow: "arrowPan 1s alternate infinite",
       },
       keyframes: {
         blink: {
@@ -61,6 +62,10 @@ export default {
           "33%": { transform: "translate(20px, -30px) scale(1.05)" },
           "66%": { transform: "translate(-15px, 15px) scale(0.97)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+        arrowPan: {
+          "0%": { transform: "translate(0px, -2px) scale(0.98)" },
+          "100%": { transform: "translate(0px, 7px) scale(1.5)" },
         },
       },
     },
