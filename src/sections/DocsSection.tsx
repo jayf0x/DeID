@@ -45,9 +45,8 @@ export const DocsSection = () => (
         <motion.div
           key={label}
           {...fadeUp(0.1)}
-          className={`flex flex-col ${
-            i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-          } gap-10 md:gap-14 items-center`}
+          className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            } gap-10 md:gap-14 items-center`}
         >
           {/* text col — narrower */}
           <div className="md:w-[38%] shrink-0 space-y-4">
