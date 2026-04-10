@@ -1,5 +1,4 @@
-import { Banner } from "./sections/Banner"
-import { InfoSection } from "./sections/InfoSection"
+import { HeroSection } from "./sections/HeroSection"
 import { DocsSection } from "./sections/DocsSection"
 import { Github } from "lucide-react"
 
@@ -7,8 +6,7 @@ const GITHUB_URL = "https://github.com/jayf0x/DeID"
 
 export const Home = () => (
   <>
-    <Banner />
-    <InfoSection />
+    <HeroSection />
     <DocsSection />
 
     <footer className="py-8 px-6 border-t border-gray-200/60 dark:border-white/[0.07] text-center">
