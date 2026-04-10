@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode production",
+    "deploy": "bash ./scripts/deploy.sh",
     "preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
