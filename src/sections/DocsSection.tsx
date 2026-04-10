@@ -1,4 +1,6 @@
 import { motion } from "framer-motion"
+import Magnifier from "react-magnifier";
+
 
 const features = [
   {
@@ -40,29 +42,29 @@ export const DocsSection = () => (
         </h2>
       </motion.div>
 
-      {features.map((f, i) => (
+      {features.map(({ label, img, desc }, i) => (
         <motion.div
-          key={f.label}
+          key={label}
           {...fadeUp(0.1)}
-          className={`flex flex-col ${
-            i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-          } gap-10 md:gap-16 items-center`}
+          className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            } gap-10 md:gap-16 items-center`}
         >
           <div className="flex-1 space-y-4 min-w-0">
             <p className="text-4xl font-black text-gray-100 dark:text-white/10 select-none">
-              {f.label}
+              {label}
             </p>
             <h3 className="text-xl font-bold text-foreground -mt-2">{f.title}</h3>
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm md:text-base">
-              {f.desc}
+              {desc}
             </p>
           </div>
 
           <div className="flex-1 w-full min-w-0">
             <div className="rounded-xl overflow-hidden border border-gray-200/80 dark:border-white/[0.08] shadow-xl shadow-black/5 dark:shadow-black/30">
-              <img
-                src={f.img}
-                alt={f.title}
+              <Magnifier
+                key={img}
+                src={img}
+                zoomFactor={3}
                 className="w-full h-auto block"
               />
             </div>
