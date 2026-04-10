@@ -14,21 +14,6 @@ body {
   isolation: isolate;
 }
 
-:root {
-  --background: #f7f7f8;
-  --foreground: #0f0f10;
-  --primary: #2563eb;
-  --muted: #6b7280;
-}
-
-.dark {
-  --background: #09090b;
-  --foreground: #f1f1f3;
-  --primary: #3b82f6;
-  --muted: #9ca3af;
-}
-
-
 @theme {
   --breakpoint-sm: 40rem;
   --breakpoint-lg: 64rem;
