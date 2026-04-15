@@ -15,8 +15,10 @@ jobs:
       matrix:
         include:
           - platform: macos-latest
+            target: aarch64-apple-darwin
             args: '--target aarch64-apple-darwin'
-          - platform: macos-latest
+          - platform: macos-13
+            target: x86_64-apple-darwin
             args: '--target x86_64-apple-darwin'
     runs-on: ${{ matrix.platform }}
     steps:
@@ -30,7 +32,22 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
         with:
-          targets: aarch64-apple-darwin,x86_64-apple-darwin
+          targets: ${{ matrix.target }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build sidecar
+        working-directory: piipaya-desktop
+        run: |
+          pip install pyinstaller
+          pip install -r src-python/requirements.txt
+          pyinstaller --clean --onefile \
+            --name "piipaya-sidecar-${{ matrix.target }}" \
+            src-python/__main__.py
+          mkdir -p src-tauri/binaries
+          cp "dist/piipaya-sidecar-${{ matrix.target }}" src-tauri/binaries/
 
       - name: Install frontend dependencies
         working-directory: piipaya-desktop
