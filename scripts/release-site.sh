@@ -1,8 +1,6 @@
+#!/usr/bin/env bash
+set -e
 
-cd site
-
-vite build --mode production
-
-git add .
-git commit -m "Publishing build"
-git push origin main
+echo "Triggering site deploy via GitHub Actions..."
+gh workflow run static.yml --ref main
+echo "Deploy started. Check status: gh run list --workflow=static.yml"
