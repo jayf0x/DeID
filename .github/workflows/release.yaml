@@ -43,7 +43,19 @@ jobs:
           projectPath: piipaya-desktop
           tagName: desktop-v__VERSION__
           releaseName: PIIPAYA Desktop v__VERSION__
-          releaseBody: 'Download the .dmg below to install.'
-          releaseDraft: true
+          releaseBody: |
+            ## PIIPAYA Desktop v__VERSION__
+
+            ### Install
+            Download the `.dmg` for your Mac below and drag PIIPAYA to your Applications folder.
+
+            | File | Architecture |
+            |------|-------------|
+            | `PIIPAYA_aarch64.dmg` | Apple Silicon (M1/M2/M3) |
+            | `PIIPAYA_x86_64.dmg` | Intel Mac |
+
+            ### What's new
+            See [commits](../../commits/desktop-v__VERSION__) for full changelog.
+          releaseDraft: false
           prerelease: false
           args: ${{ matrix.args }}
