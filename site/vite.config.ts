@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: mode === 'production' ? '/DeID/' : '/',
+  base: mode === 'production' ? '/PIIPAYA/' : '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,

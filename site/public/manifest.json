@@ -1,6 +1,6 @@
 {
-  "name": "DeID",
-  "short_name": "DeID",
+  "name": "PIIPAYA",
+  "short_name": "PIIPAYA",
   "description": "De-Identification app for PII data tags and narrative coherence.",
   "start_url": "/",
   "theme_color": "#000000",

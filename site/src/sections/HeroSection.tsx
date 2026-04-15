@@ -2,8 +2,8 @@ import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { Github, Download, ChevronDown, ShieldCheck, Cpu, Files, Link2 } from "lucide-react"
 
-const GITHUB_URL = "https://github.com/jayf0x/DeID"
-const RELEASES_URL = "https://github.com/jayf0x/DeID/releases/latest"
+const GITHUB_URL = "https://github.com/jayf0x/PIIPAYA"
+const RELEASES_URL = "https://github.com/jayf0x/PIIPAYA/releases/latest"
 
 const features = [
   {
@@ -39,7 +39,7 @@ export const HeroSection = () => (
     >
       <motion.img
         src="./logo.png"
-        alt="DeID"
+        alt="PIIPAYA"
         className="h-24 w-auto"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

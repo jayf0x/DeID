@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "deid-app",
+      "name": "piipaya-app",
       "dependencies": {
         "framer-motion": "^10.12.16",
         "lucide-react": "^0.487.0",
