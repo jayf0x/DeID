@@ -2,15 +2,17 @@
 
 Local MacOS app to remove any sensitive data from any file, keeping narrative coherence and 100% private.
 
-[Website](https://jayf0x.github.io/PIIPAYA/).
-
-
-<img src="./assets/preview.png" />
+<a href="https://jayf0x.github.io/PIIPAYA/">
+    <img src="./assets/preview.png" />
+</a>
 
 > Currently only fully supporting on MacOS.
 
+**Download**:
+From [website](https://jayf0x.github.io/PIIPAYA/) or see [releases](https://github.com/jayf0x/PIIPAYA/releases).
 
-**Why?**
+
+
 Support file batching, `OCR` support for most common image types, PDF and DOCX.
 
 
