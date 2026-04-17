@@ -1,78 +1,10 @@
+# Desktop releases are built locally via `bun run release:desktop`.
+# This workflow is a no-op kept for reference only.
 name: Release Desktop
-
 on:
-  push:
-    tags:
-      - 'desktop-v*'
   workflow_dispatch:
-
 jobs:
-  publish-tauri:
-    permissions:
-      contents: write
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - platform: macos-latest
-            target: aarch64-apple-darwin
-            args: '--target aarch64-apple-darwin'
-          - platform: macos-13
-            target: x86_64-apple-darwin
-            args: '--target x86_64-apple-darwin'
-    runs-on: ${{ matrix.platform }}
+  info:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-
-      - uses: oven-sh/setup-bun@v2
-
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: ${{ matrix.target }}
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Build sidecar
-        working-directory: piipaya-desktop
-        run: |
-          pip install pyinstaller
-          pip install -r src-python/requirements.txt
-          pyinstaller --clean --onefile \
-            --name "piipaya-sidecar-${{ matrix.target }}" \
-            src-python/__main__.py
-          mkdir -p src-tauri/binaries
-          cp "dist/piipaya-sidecar-${{ matrix.target }}" src-tauri/binaries/
-
-      - name: Install frontend dependencies
-        working-directory: piipaya-desktop
-        run: bun install
-
-      - uses: tauri-apps/tauri-action@v0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          projectPath: piipaya-desktop
-          tagName: desktop-v__VERSION__
-          releaseName: PIIPAYA Desktop v__VERSION__
-          releaseBody: |
-            ## PIIPAYA Desktop v__VERSION__
-
-            ### Install
-            Download the `.dmg` for your Mac below and drag PIIPAYA to your Applications folder.
-
-            | File | Architecture |
-            |------|-------------|
-            | `PIIPAYA_aarch64.dmg` | Apple Silicon (M1/M2/M3) |
-            | `PIIPAYA_x86_64.dmg` | Intel Mac |
-
-            ### What's new
-            See [commits](../../commits/desktop-v__VERSION__) for full changelog.
-          releaseDraft: false
-          prerelease: false
-          args: ${{ matrix.args }}
+      - run: echo "Releases are published locally. Run 'bun run release:desktop' from the repo root."
