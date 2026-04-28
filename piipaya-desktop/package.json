@@ -16,10 +16,10 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "tauri": "tauri",
-    "sh:build:side": "bash ./scripts/build-sidecar.sh",
-    "sh:install:py": "bash ./scripts/install-pyenv.sh",
-    "sh:test:e2e": "bash ./scripts/test-e2e.sh",
-    "sh:test:py": "bash ./scripts/test-python.sh"
+    "sh:build-side": "bash ./scripts/build-sidecar.sh",
+    "sh:init-py": "bash ./scripts/install-pyenv.sh",
+    "sh:test-e2e": "bash ./scripts/test-e2e.sh",
+    "sh:test-py": "bash ./scripts/test-python.sh"
   },
   "license": "MIT",
   "dependencies": {
