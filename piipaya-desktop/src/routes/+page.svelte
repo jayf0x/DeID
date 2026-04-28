@@ -119,7 +119,7 @@ He realized that by June 12, 2026, his entire identity would be owned by some bo
 
 That’s why you need a Derek. Or a tool that acts like one. Someone to step in and say, "Let's turn 'Sarah Jenkins' into 'Stacy Miller' and 'General Hospital of Southern California' into 'City Wellness Center'." You keep the story, you keep the drama, but you lose the identity theft. Now, if you’ll excuse me, I have a self-care appointment at 4:00 PM. Privacy is the ultimate flex, Derrick. Get with the program.`;
 
-  let ready = $state(false);
+  let ready = $state(true);
   let startupError = $state<string | null>(null);
   let browserMockMode = $state(false);
   let featureMap = $state<string[]>([]);

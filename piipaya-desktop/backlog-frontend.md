@@ -1,20 +1,29 @@
+## BUG: infinite loading without model
+
+App status will show `Initializing…` when no model is yet installed.
+
+Expected UI:
+- Message `Initializing…` does not show if it's not really initing.
+- messages like`en_core_web_lg (installed)` does not show `installed` when not installed.
+- `ready` state does not disable opening or changing settings.
+
 
 ## FEATURE: add one shot with GLiNER
 Add UI support to select GLiNER as a standalone one-shot DeID solution.
 
 
-## [area: ui] Carbon component integration issues
+## Carbon component integration issues
 
 - **ToggleSwitch remount on prop change** — uses `{#key checked}` to sync controlled state with Carbon Toggle's internal state. Causes brief DOM remount when parent updates `checked`. Investigate `bind:toggled` once Svelte 5 / Carbon interop is stable.
 - **Carbon white.css global resets** — overridden with `!important` in `base.css`. Long-term: import only per-component Carbon CSS instead of full white theme.
 
 
-## [area: ui] AdvancedSettingsModal
+## AdvancedSettingsModal
 
 - **Consistency slider precision loss** — value scaled ×100 for 0–100 range. Sub-percent precision (e.g. 0.075 → 0.08) lost. Consider 2-decimal display or raw 0–1 range.
 
 
-## [area: ui] General
+## General
 
 - **AskPopover token bar has no label** — percentage or token count not shown alongside progress bar.
 
